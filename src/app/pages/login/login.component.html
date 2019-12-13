@@ -1,0 +1,30 @@
+<form class="card light-gray elv-standard" #loginForm="ngForm" (ngSubmit)="submitLogin()">
+    <div class="card-header">
+        <h1 class="card-title">Login</h1>
+    </div>
+    <div class="card-body">
+
+
+
+        <div class="form-control" [ngClass]="{'valid': email.valid, 'invalid': email.invalid && (email.touched || loginForm.touched)}">
+            <input pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" id="email" placeholder="Email" [(ngModel)]="loginModel.email" required #email="ngModel">
+
+        </div>
+
+        <div class="form-control" [ngClass]="{'valid': password.valid, 'invalid': password.invalid && (password.touched || loginForm.touched)}">
+            <input type="password" name="password" [(ngModel)]="loginModel.password" placeholder="Password" required #password="ngModel">
+        </div>
+
+        <p class="text-danger" *ngIf="showNotFoundMsg">
+            Email or password is incorrect.
+        </p>
+
+        <p class="text-danger" *ngIf="showExceptionMsg">
+            An unexpected exception occured.
+        </p>
+
+    </div>
+    <div class="card-footer">
+        <button type="submit" [disabled]="loginForm.invalid">Submit</button>
+    </div>
+</form>

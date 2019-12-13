@@ -1,0 +1,50 @@
+.form-control {
+    position: relative;
+    margin: 16px 0;
+    &.valid input {
+        border-color: #16ec20;
+    }
+    &.invalid input {
+        border-color: #ff0400;
+    }
+    &::after {
+        content: '*';
+        display: block;
+        width: 30px;
+        height: 50px;
+        line-height: 50px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        text-align: center;
+    }
+    &.valid::after {
+        content: '✓';
+        color: green;
+    }
+    &.invalid::after {
+        color: red;
+    }
+}
+
+input {
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    margin: 4px 0;
+    border-radius: 4px;
+    padding: 0 8px;
+    width: 100%;
+    padding-right: 24px;
+}
+
+// input.ng-valid {
+//     border-color: #16ec20;
+// }
+// form.ng-touched input.ng-invalid,
+// input.ng-invalid.ng-dirty {
+//     border-color: #ff0400;
+//     /* red */
+// }

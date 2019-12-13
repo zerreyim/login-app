@@ -1,0 +1,29 @@
+<h1>
+    Users Management</h1>
+
+<button class="btn-primary elv-standard" (click)="setEditingUser({})">Create New User</button>
+<hr>
+<table class="users-list elv-standard">
+    <thead>
+        <tr>
+            <th>Photo</th>
+            <th>Name</th>
+            <th class="d-sm-up-table-cell">Username</th>
+            <th class="d-sm-up-table-cell">Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of usersList | async; let i = index;">
+            <td><img [src]="user.photo" alt="{{user.first_name}}'s profile photo" title="{{user.first_name}}'s profile photo"></td>
+            <td>{{user.first_name + ' ' + user.last_name}}</td>
+            <td class="d-sm-up-table-cell">{{user.username}}</td>
+            <td class="d-sm-up-table-cell">{{user.email}}</td>
+            <td>
+                <button class="btn-primary" (click)="setEditingUser(user, i)">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<edit-user [user]="editingUser" (statusChange)="updateList($event)" *ngIf="editingUser !== undefined"></edit-user>

@@ -1,0 +1,14 @@
+.card {
+    padding: 16px;
+    border-radius: 4px;
+    background: #fff;
+    &.light-gray {
+        background: #f7f7f7;
+    }
+    .card-body {
+        padding: 16px 0;
+    }
+    .card-footer {
+        text-align: right;
+    }
+}

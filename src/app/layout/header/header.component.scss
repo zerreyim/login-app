@@ -1,0 +1,26 @@
+.header-wrapper {
+    background: #fff;
+    padding: 0 16px;
+    .navbar {
+        ul>li {
+            display: inline-block;
+            &+li {
+                margin-left: 20px;
+            }
+        }
+        a {
+            font-family: 'Nunito', sans-serif;
+        }
+    }
+    .logo-wrapper {
+        .logo-link {
+            display: block;
+            height: 50px;
+            padding-top: 5px;
+            img {
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+}

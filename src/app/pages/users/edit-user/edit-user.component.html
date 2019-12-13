@@ -1,0 +1,62 @@
+<div class="edit-modal-wrapper">
+    <form class="card light-gray elv-standard" #userForm="ngForm" (ngSubmit)="submitUser()">
+        <div class="card-header">
+            <h2 class="card-title" *ngIf="user.id !== undefined">Editing <em>{{user.first_name + ' ' + user.last_name}}</em></h2>
+            <h2 class="card-title" *ngIf="user.id === undefined">Creating New User
+            </h2>
+        </div>
+        <div class="card-body">
+
+            <div class="form-control" [ngClass]="{'valid': firstName.valid, 'invalid': firstName.invalid && (firstName.touched || userForm.touched)}">
+                <input name="firstName" id="firstName" [(ngModel)]="userModel.first_name" placeholder="First name" required #firstName="ngModel">
+            </div>
+
+            <div class="form-control" [ngClass]="{'valid': lastName.valid, 'invalid': lastName.invalid && (lastName.touched || userForm.touched)}">
+                <input name="lastName" id="lastName" [(ngModel)]="userModel.last_name" placeholder="Last name" required #lastName="ngModel" (change)="checkEmailInUse()">
+            </div>
+
+            <div class="form-control" [ngClass]="{'valid': username.valid && !usernameInUse, 'invalid': (username.invalid || usernameInUse) && (username.touched || userForm.touched)}">
+                <input name="username" id="username" [(ngModel)]="userModel.username" placeholder="Username" required #username="ngModel" (ngModelChange)="checkUsernameInUse()">
+                <p class="text-danger" *ngIf="usernameInUse">
+                    Username is in use.
+                </p>
+            </div>
+
+
+
+            <div class="form-control" [ngClass]="{'valid': email.valid && !emailInUse, 'invalid': (email.invalid || emailInUse) && (email.touched || userForm.touched)}">
+                <input pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" id="email" placeholder="Email" [(ngModel)]="userModel.email" required #email="ngModel" (ngModelChange)="checkEmailInUse()">
+                <p class="text-danger" *ngIf="emailInUse">
+                    Email is in use.
+                </p>
+            </div>
+
+
+
+            <div class="form-control" [ngClass]="{'valid': password.valid, 'invalid': password.invalid && (password.touched || userForm.touched)}">
+                <input name="password" id="password" [(ngModel)]="userModel.password" placeholder="Password" required #password="ngModel">
+            </div>
+
+            <div class="form-control" [ngClass]="{'valid': photo.valid, 'invalid': photo.invalid && (photo.touched || userForm.touched)}">
+                <input name="photo" id="photo" [(ngModel)]="userModel.photo" placeholder="Photo url" required #photo="ngModel">
+            </div>
+
+
+            <p class="text-danger" *ngIf="showNotFoundMsg">
+                Email or password is incorrect.
+            </p>
+
+            <p class="text-danger" *ngIf="showExceptionMsg">
+                An unexpected exception occured.
+            </p>
+
+        </div>
+        <div class="card-footer">
+            <div class="action-buttons">
+                <button type="submit" class="btn-primary save" [disabled]="userForm.invalid">Save</button>
+                <button type="button" class="btn-default cancel" (click)="cancel()">Cancel</button>
+                <button type="button" class="btn-danger delete" (click)="delUser()" *ngIf="userModel.id !== undefined">Delete</button>
+            </div>
+        </div>
+    </form>
+</div>

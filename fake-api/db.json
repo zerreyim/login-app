@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Transcof",
+      "first_name": "Terry",
+      "last_name": "Fallen",
+      "password": "7NPOdNMr",
+      "photo": "http://dummyimage.com/206x204.jpg/cc0000/ffffff",
+      "email": "tfallen0@kickstarter.com"
+    },
+    {
+      "id": 2,
+      "username": "Ronstring",
+      "first_name": "Janey",
+      "last_name": "Dewdeny",
+      "password": "3Jvft4yaK",
+      "photo": "http://dummyimage.com/155x215.jpg/ff4444/ffffff",
+      "email": "jdewdeny1@over-blog.com"
+    },
+    {
+      "id": 3,
+      "username": "Home Ing",
+      "first_name": "Hans",
+      "last_name": "Scargle",
+      "password": "fQW4DYqBQQp",
+      "photo": "http://dummyimage.com/107x226.png/cc0000/ffffff",
+      "email": "hscargle2@liveinternet.ru"
+    },
+    {
+      "id": 4,
+      "username": "Y-find",
+      "first_name": "Allard",
+      "last_name": "Pennings",
+      "password": "ozXaFa6gQx",
+      "photo": "http://dummyimage.com/208x159.png/ff4444/ffffff",
+      "email": "apennings3@hostgator.com"
+    },
+    {
+      "id": 5,
+      "username": "Ventosanzap",
+      "first_name": "Tomkin",
+      "last_name": "Yakebovich",
+      "password": "utn7Fbmqi",
+      "photo": "http://dummyimage.com/230x195.bmp/dddddd/000000",
+      "email": "tyakebovich4@tinyurl.com"
+    },
+    {
+      "id": 6,
+      "username": "Greenlam",
+      "first_name": "Olva",
+      "last_name": "Arguile",
+      "password": "iQYaeyne",
+      "photo": "http://dummyimage.com/184x107.jpg/cc0000/ffffff",
+      "email": "oarguile5@creativecommons.org"
+    },
+    {
+      "id": 7,
+      "username": "Sonsing",
+      "first_name": "Jillene",
+      "last_name": "Gagan",
+      "password": "3lJOx9lpw3P",
+      "photo": "http://dummyimage.com/157x103.png/cc0000/ffffff",
+      "email": "jgagan6@cdbaby.com"
+    },
+    {
+      "id": 8,
+      "username": "Biodex",
+      "first_name": "Eyde",
+      "last_name": "McKissack",
+      "password": "0umGoWkXA",
+      "photo": "http://dummyimage.com/229x121.png/cc0000/ffffff",
+      "email": "emckissack7@goo.ne.jp"
+    },
+    {
+      "id": 9,
+      "username": "Prodder",
+      "first_name": "Orran",
+      "last_name": "O'Duane",
+      "password": "Ms4gx2R",
+      "photo": "http://dummyimage.com/214x172.bmp/ff4444/ffffff",
+      "email": "ooduane8@simplemachines.org"
+    },
+    {
+      "id": 10,
+      "username": "Span",
+      "first_name": "Abie",
+      "last_name": "Folkard",
+      "password": "mDUVLTM",
+      "photo": "http://dummyimage.com/167x148.jpg/dddddd/000000",
+      "email": "afolkard9@discovery.com"
+    }
+  ]
+}

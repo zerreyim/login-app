@@ -1,0 +1,41 @@
+table.users-list {
+    background: #fff;
+    border-spacing: 0;
+    margin: 0 auto;
+    width: 100%;
+    th,
+    td {
+        margin: 0;
+        text-align: left;
+        height: 60px;
+        padding: 8px;
+        border-bottom: 1px solid #eaeaea;
+    }
+    tr {
+        td,
+        th {
+            &:first-child {
+                padding-left: 16px;
+            }
+            &:last-child {
+                padding-right: 16px;
+            }
+        }
+        td:last-child {
+            text-align: right;
+        }
+    }
+    th {
+        background: #ddd;
+    }
+    td {
+        img {
+            max-height: 50px;
+            width: auto;
+            display: block;
+        }
+        button+button {
+            margin-left: 8px;
+        }
+    }
+}

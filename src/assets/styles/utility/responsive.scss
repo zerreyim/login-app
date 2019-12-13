@@ -1,0 +1,9 @@
+[class^=d-sm-up] {
+    display: none;
+}
+
+@media (min-width: 900px) {
+    .d-sm-up-table-cell {
+        display: table-cell;
+    }
+}

@@ -1,0 +1,14 @@
+<div class="header-wrapper flex fdr elv-standard">
+    <div class="logo-wrapper">
+        <a href="/" title="Go to Homepage" class="logo-link">
+            <img src="https://cilgingezgin.com/images/logo_round.png" alt="logo">
+        </a>
+    </div>
+    <nav class="navbar flex-grow flex aic jcfe">
+        <ul>
+            <li><a role="button" tabindex="-1">About</a></li>
+            <li><a role="button" tabindex="-1">Contact</a></li>
+            <li *ngIf="user.isAuthenticated"><a role="button" tabindex="-1" class="btn-warning" (click)="api.logoff()">Logout</a></li>
+        </ul>
+    </nav>
+</div>
